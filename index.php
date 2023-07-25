@@ -20,7 +20,9 @@
             <div class="coffee-header__display"></div>
             <div class="coffee-header__sugar"></div>
             <div class="coffee-header__details"></div>
-            <div class="coffee-header__screen"></div>
+            <div class="coffee-header__screen">
+                <p> XXX cts </p>
+            </div>
             <div class="coffee-header__coins"></div>           
         </div>
         <div class="coffee-medium">

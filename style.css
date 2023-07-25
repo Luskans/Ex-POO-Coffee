@@ -29,7 +29,7 @@ body {
     position: absolute;
     top: 5px;
     left: 31px;
-    background-color: #c3ddb7;
+    background-color: #ef9c9c;
     border: 3px solid #9b9091;
     border-radius: 50%;
 }
@@ -59,7 +59,7 @@ body {
     border-radius: 3px;
     position: absolute;
     top: 4px;
-    box-shadow: 0 0 0 2px #c3ddb7;
+    box-shadow: 0 0 0 2px #ef9c9c;
 }
 
 .coffee-header__power-one:hover {
@@ -123,6 +123,13 @@ body {
     cursor: pointer;
 }
 
+.coffee-header__sugar:active {
+    width: 8px;
+    height: 8px;
+    background-color:#ef9c9c;
+    border: 3px solid #282323;
+}
+
 .coffee-header__details {
     width: 8px;
     height: 20px;
@@ -141,6 +148,17 @@ body {
     right: 30px;
     background-color: #c3ddb7;
     border: 3px solid #bcb0af;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.coffee-header__screen p {
+    /* font-family: 'Homemade Apple', cursive; */
+    font-family: 'Handjet', cursive;
+    color: rgb(0, 0, 0);
+    font-size: 0.64em;
+    margin-right: 5px;
 }
 
 .coffee-header__coins {
@@ -464,6 +482,6 @@ body {
     /* font-family: 'Homemade Apple', cursive; */
     font-family: 'Handjet', cursive;
     color: rgb(0, 0, 0);
-    font-size: 0.6em;
-    margin-left: 5px;
+    font-size: 0.64em;
+    margin-left: 3px;
 }
