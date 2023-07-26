@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Handjet&display=swap');
 
+:root {
+    /* #43beae */
+    --primary-color: #e7d352;
+    /* #9acfc5 */
+    --secondary-color: #fbecab;
+    --green-color: #c3ddb7;
+    --red-color: #ef9c9c;
+}
+
 body {
     background-color: rgb(159, 123, 88);
 }
@@ -100,9 +109,13 @@ body {
     top: calc(50% - 25px);
     left: calc(50% - 25px);
     border-radius: 50%;
-    background-color: #9acfc5;
-    border: 5px solid #43beae;
+    background-color: var(--secondary-color);
+    border: 5px solid var(--primary-color);
     box-sizing: border-box;
+
+
+    /* border-color: #43beae #43beae #43beae #43beae; */
+    /* animation: fillCircle 4s linear forwards; */
 }
 
 .coffee-header__display:hover {
@@ -146,7 +159,7 @@ body {
     position: absolute;
     top: 42px;
     right: 30px;
-    background-color: #c3ddb7;
+    background-color: var(--green-color);
     border: 3px solid #bcb0af;
     display: flex;
     align-items: center;
@@ -312,8 +325,7 @@ body {
     top: 50px;
     left: calc(50% - 3px);
     background-color: #74372b;
-    /* animation: ; */
-    animation: liquid 4s 2s linear 1 paused;
+    /* animation: liquid 4s 2s linear 1 paused; */
 }
 
 .coffee-medium__smoke {
@@ -372,28 +384,28 @@ body {
     opacity: 0;
     bottom: 50px;
     left: 102px;
-    animation: smokeOne 3s 3s linear infinite paused;
+    /* animation: smokeOne 3s 3s linear infinite paused; */
 }
 
 .coffee-medium__smoke-two {
     opacity: 0;
     bottom: 70px;
     left: 118px;
-    animation: smokeTwo 3s 4s linear infinite paused;
+    /* animation: smokeTwo 3s 4s linear infinite paused; */
 }
 
 .coffee-medium__smoke-three {
     opacity: 0;
     bottom: 65px;
     right: 118px;
-    animation: smokeTwo 3s 5s linear infinite paused;
+    /* animation: smokeTwo 3s 5s linear infinite paused; */
 }
 
 .coffee-medium__smoke-four {
     opacity: 0;
     bottom: 50px;
     right: 102px;
-    animation: smokeOne 3s 4s linear infinite paused;
+    /* animation: smokeOne 3s 4s linear infinite paused; */
 }
 
 .coffee-footer {
@@ -402,7 +414,7 @@ body {
     position: absolute;
     bottom: 25px;
     left: calc(50% - 47.5%);
-    background-color: #41bdad;
+    background-color: var(--primary-color);
     border-radius: 10px;
     
 }
@@ -423,8 +435,8 @@ body {
     position: absolute;
     top: calc(50% - 40px);
     left: calc(50% + 135px);
-    background-color: #41bdad;
-    box-shadow: 0 100px  0 #41bdad;
+    background-color: var(--primary-color);
+    box-shadow: 0 100px  0 var(--primary-color);
 }
 
 .coffee-menu {
@@ -497,4 +509,74 @@ body {
     color: rgb(0, 0, 0);
     font-size: 0.64em;
     margin-left: 3px;
+}
+
+.liquid-Animation {
+    animation: liquid 4s 0.5s linear 1;
+}
+
+.smokeOne-Animation {
+    animation: smokeOne 3s 3s linear infinite;
+}
+
+.smokeTwo-Animation {
+    animation: smokeTwo 3s 4s linear infinite;
+}
+
+.smokeThree-Animation {
+    animation: smokeTwo 3s 5s linear infinite;
+}
+
+.smokeFour-Animation {
+    animation: smokeOne 3s 4s linear infinite;
+}
+
+@keyframes cup {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      49% {
+        transform: translateX(-100px);
+        opacity: 0;
+      }
+      50% {
+        transform: translateX(100px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+}
+
+.cup-Animation {
+    animation: cup 1.5s linear 1;
+}
+
+@keyframes circle {
+    0% {
+        transform: rotate(0deg);
+        border-color: var(--primary-color);
+    }
+    25% {
+        transform: rotate(120deg);
+        border-color: var(--primary-color) transparent transparent transparent;
+    }
+    50% {
+        transform: rotate(240deg);
+        border-color: var(--primary-color) transparent transparent transparent;
+    }
+    75% {
+        transform: rotate(360deg);
+        border-color: var(--primary-color) transparent transparent transparent;
+    }
+    100% {
+        transform: rotate(360deg);
+        border-color: var(--primary-color);
+    }
+}
+
+.circle {
+    animation: circle 6s linear forwards;
 }
