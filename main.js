@@ -64,13 +64,13 @@ btns.forEach((button, index) => {
 
 cup.addEventListener('click', function () {
     cup.classList.add('cup-Animation');
-    setTimeout( () => {
-        liquid.classList.remove('cup-Animation');
-    }, 6000)
     smokeOne.classList.remove('smokeOne-Animation');
     smokeTwo.classList.remove('smokeTwo-Animation');
     smokeThree.classList.remove('smokeThree-Animation');
     smokeFour.classList.remove('smokeFour-Animation');
+    setTimeout( () => {
+        cup.classList.remove('cup-Animation');
+    }, 6000)
 })
 
 display.addEventListener('click', function () {

@@ -279,6 +279,10 @@ body {
     border-radius: 0 0 70px 70px / 0 0 110px 110px;
 }
 
+.coffee-medium__cup:hover {
+    cursor: pointer;
+}
+
 .coffee-medium__cup::after {
     content: "";
     width: 20px;
